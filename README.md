@@ -1,51 +1,17 @@
-# Remotion video
+# Vidéo générée à partir de la librairie _Remotion_.
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <img src="https://github.com/remotion-dev/logo/raw/main/withtitle/element-0.png">
-  </a>
-</p>
+J'ai pris beaucoup de plaisir à faire ce test et à découvrir de nouvelles façons de coder !
 
-Welcome to your Remotion project!
+Le résultat n'est qu'une partie de ce qui était attendu, je me suis concentré sur **le logo** et _non le texte_.
 
-## Commands
+>J'ai pu générer la vidéo avec une animation basique en **moins d'une heure** !
 
-**Install Dependencies**
+## Mes resources étaient :
+• La doc **Remotion**
 
-```console
-npm i
-```
+• **developer.mozilla.com** (pour m'assurer de ne pas rater le 'css')
 
-**Start Preview**
+• Le repo **HelloWorld** de remotion sur Github
 
-```console
-npm start
-```
+• Les consignes, dont notamment la **vidéo du résultat** demandé comme appui.
 
-**Render video**
-
-```console
-npm run build
-```
-
-**Upgrade Remotion**
-
-```console
-npm run upgrade
-```
-
-## Docs
-
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
-
-## Help
-
-We provide help [on our Discord server](https://discord.gg/6VzzNDwUwV).
-
-## Issues
-
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
-
-## License
-
-Notice that for some entities a company license is needed. Read [the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
