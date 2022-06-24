@@ -12,20 +12,6 @@ export const Animation = () => {
 	const frame = useCurrentFrame();
 	const {durationInFrames, fps} = useVideoConfig();
 
-	// const logoTranslationProgress = spring({
-	// 	frame: frame - 25,
-	// 	fps,
-	// 	config: {
-	// 		damping: 100,
-	// 	},
-	// });
-	//
-	// const logoTranslation = interpolate(
-	// 	logoTranslationProgress,
-	// 	[0, 1],
-	// 	[0, -150]
-	// );
-
 	const scale = spring({
 		fps,
 		from: 0,
@@ -33,10 +19,19 @@ export const Animation = () => {
 		frame: frame - 25,
 	});
 
+	const blur = spring({
+		fps,
+		from: 1,
+		to: 0,
+		frame: frame - 30,
+	});
+
 	return (
 		<AbsoluteFill style={{backgroundColor: 'black'}}>
 			<AbsoluteFill style={{transform: `scale(${scale})`}}>
-				<Logo />
+				<AbsoluteFill style={{transform: `blur(${blur})`}}>
+					<Logo />
+				</AbsoluteFill>
 			</AbsoluteFill>
 		</AbsoluteFill>
 	);
