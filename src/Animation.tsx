@@ -12,22 +12,30 @@ export const Animation = () => {
 	const frame = useCurrentFrame();
 	const {durationInFrames, fps} = useVideoConfig();
 
-	const logoTranslationProgress = spring({
-		frame: frame - 25,
+	// const logoTranslationProgress = spring({
+	// 	frame: frame - 25,
+	// 	fps,
+	// 	config: {
+	// 		damping: 100,
+	// 	},
+	// });
+	//
+	// const logoTranslation = interpolate(
+	// 	logoTranslationProgress,
+	// 	[0, 1],
+	// 	[0, -150]
+	// );
+
+	const scale = spring({
 		fps,
-		config: {
-			damping: 100,
-		},
+		from: 0,
+		to: 1,
+		frame: frame - 25,
 	});
 
-	const logoTranslation = interpolate(
-		logoTranslationProgress,
-		[0, 1],
-		[0, -150]
-	);
 	return (
 		<AbsoluteFill style={{backgroundColor: 'black'}}>
-			<AbsoluteFill style={{transform: `translateY(${logoTranslation}px)`}}>
+			<AbsoluteFill style={{transform: `scale(${scale})`}}>
 				<Logo />
 			</AbsoluteFill>
 		</AbsoluteFill>
