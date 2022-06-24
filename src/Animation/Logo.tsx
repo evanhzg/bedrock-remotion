@@ -1,7 +1,23 @@
-export const Logo: React.FC<{
+import {
+    AbsoluteFill,
+    interpolate,
+    spring,
+    useCurrentFrame,
+    useVideoConfig,
+} from 'remotion';
 
-    scale: number;
-}> = ({scale}) => {
+export const Logo: React.FC = () => {
+    const videoConfig = useVideoConfig();
+    const frame = useCurrentFrame();
+
+    const scale = spring({
+         frame,
+         config: {
+             mass: 0.5,
+         },
+         fps: videoConfig.fps,
+     });
+
     return (
         <svg viewBox="0 0 80 80">
         <path

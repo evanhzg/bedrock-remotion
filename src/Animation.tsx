@@ -26,7 +26,7 @@ export const Animation = () => {
 		[0, -150]
 	);
 	return (
-		<AbsoluteFill style={{backgroundColor: 'white'}}>
+		<AbsoluteFill style={{backgroundColor: 'black'}}>
 			<AbsoluteFill style={{transform: `translateY(${logoTranslation}px)`}}>
 				<Logo />
 			</AbsoluteFill>
