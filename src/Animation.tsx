@@ -19,5 +19,17 @@ export const Animation = () => {
 			damping: 100,
 		},
 	});
-	return null;
+
+	const logoTranslation = interpolate(
+		logoTranslationProgress,
+		[0, 1],
+		[0, -150]
+	);
+	return (
+		<AbsoluteFill style={{backgroundColor: 'white'}}>
+			<AbsoluteFill style={{transform: `translateY(${logoTranslation}px)`}}>
+				<Logo />
+			</AbsoluteFill>
+		</AbsoluteFill>
+	);
 };
